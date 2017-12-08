@@ -9,11 +9,13 @@ get "/about" do
 end
 
 get "/test" do
-  "this is the request to test page. And it's output is placed in server output"
+	"Prints random number on each customer's /test request-#{rand(1...10)}"
 end
 
 
-
+get  "/cat"  do
+  "Meow Meow I AM CAT"
+end
 
 
 
