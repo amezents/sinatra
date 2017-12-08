@@ -8,9 +8,9 @@ get "/about" do
 	erb :about
 end
 
-
-
-
+get "/test" do
+  puts "this is the request to test page. And it's output is placed in server output"
+end
 
 
 
