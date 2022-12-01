@@ -1,7 +1,7 @@
 require "sinatra"
 
 configure do
-  set :port => 8080
+  set :port => 0080
 end
 
 get "/" do
