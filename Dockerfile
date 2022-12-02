@@ -1,4 +1,6 @@
-FROM ruby:2.7-slim-buster
+FROM ruby:2.7-buster
+LABEL maintainer=​"amezents@gmail.com"​
+
 
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 0
@@ -10,4 +12,4 @@ RUN bundle install
 
 COPY . .
 
-CMD ["ruby", "./app.rb"]
+CMD ["bundle", "exec", "puma", "--bind", "tcp://0.0.0.0", "--port","80", "./config/puma.ru" ]

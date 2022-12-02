@@ -1,9 +1,5 @@
 require "sinatra"
 
-configure do
-  set :port => 0080
-end
-
 get "/" do
 	erb :home
 end
